@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html class="login-pf" lang="pl" dir="ltr"><head>
 	<style>
-/* BLOCARE overflow */
+/* prevenim scroll lateral */
 html, body {
-    width: 100%;
-    max-width: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
-/* doar containerele mari */
+/* container principal fix */
 .login-pf-page,
-.card-pf,
-#kc-content,
-#kc-content-wrapper {
-    width: 100% !important;
+.card-pf {
     max-width: 100% !important;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
     .login-pf-page {
@@ -30,48 +27,24 @@ html, body {
         padding: 15px !important;
     }
 
+    .login-container,
     .medium-padding {
-        padding: 10px !important;
-    }
-
-    .login-container {
         width: 100% !important;
         padding: 0 10px !important;
+        box-sizing: border-box;
     }
 
-    /* text */
-    h1, h4 {
-        word-break: break-word;
+    /* FIX TEXT (asta era problema reală) */
+    h1, h4, span, p {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
     }
 
-    /* imagini */
+    /* imagini responsive */
     img {
         max-width: 100%;
         height: auto;
     }
-
-    /* formular – NU îl mai stricăm */
-    input, button {
-        max-width: 100%;
-    }
-}
-</style>
-	<style>
-/* FIX text care iese din ecran */
-h1, h4, span, p {
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-}
-
-/* mai ales pentru secțiunea ta */
-.medium-padding h4 {
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-}
-
-/* în caz că sunt linii lungi */
-* {
-    word-wrap: break-word;
 }
 </style>
     <meta charset="utf-8">
