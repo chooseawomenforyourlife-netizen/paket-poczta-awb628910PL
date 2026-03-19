@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html class="login-pf" lang="pl" dir="ltr"><head>
 	<style>
-/* BLOCARE overflow global */
+/* BLOCARE overflow */
 html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* forțăm toate containerele să nu iasă din ecran */
+/* doar containerele mari */
 .login-pf-page,
 .card-pf,
 #kc-content,
-#kc-content-wrapper,
-.login-container,
-.medium-padding {
+#kc-content-wrapper {
     width: 100% !important;
     max-width: 100% !important;
-    min-width: 0 !important;
     box-sizing: border-box !important;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .login-pf-page {
@@ -30,32 +27,32 @@ html, body {
 
     .card-pf {
         margin: 0 !important;
-        padding: 10px !important;
+        padding: 15px !important;
     }
 
     .medium-padding {
         padding: 10px !important;
     }
 
+    .login-container {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
     /* text */
-    h1, h4, span {
-        word-break: break-word !important;
+    h1, h4 {
+        word-break: break-word;
     }
 
     /* imagini */
     img {
-        max-width: 100% !important;
-        height: auto !important;
+        max-width: 100%;
+        height: auto;
     }
 
-    /* inputuri */
+    /* formular – NU îl mai stricăm */
     input, button {
-        width: 100% !important;
-    }
-
-    /* CEL MAI IMPORTANT */
-    * {
-        min-width: 0 !important;
+        max-width: 100%;
     }
 }
 </style>
