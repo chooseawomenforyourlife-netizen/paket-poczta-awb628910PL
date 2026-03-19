@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html class="login-pf" lang="pl" dir="ltr"><head>
 	<style>
-/* FIX MOBILE */
-@media (max-width: 768px) {
+/* BLOCARE overflow global */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-    body {
-        overflow-x: hidden;
-    }
+/* forțăm toate containerele să nu iasă din ecran */
+.login-pf-page,
+.card-pf,
+#kc-content,
+#kc-content-wrapper,
+.login-container,
+.medium-padding {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
 
     .login-pf-page {
         padding: 10px !important;
     }
 
     .card-pf {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 15px !important;
-        box-sizing: border-box;
-    }
-
-    .login-container {
-        width: 100% !important;
-        padding: 0 10px !important;
+        margin: 0 !important;
+        padding: 10px !important;
     }
 
     .medium-padding {
         padding: 10px !important;
     }
 
-    /* text lung */
-    h1, h4 {
-        word-break: break-word;
+    /* text */
+    h1, h4, span {
+        word-break: break-word !important;
     }
 
-    /* logo */
-    .header-logo img {
-        max-width: 180px;
-        width: 100%;
-        height: auto;
+    /* imagini */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 
-    /* container central */
-    #kc-content {
+    /* inputuri */
+    input, button {
         width: 100% !important;
     }
 
-    #kc-content-wrapper {
-        width: 100% !important;
-        padding: 0 !important;
+    /* CEL MAI IMPORTANT */
+    * {
+        min-width: 0 !important;
     }
 }
 </style>
